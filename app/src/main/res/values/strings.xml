@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Football Apps</string>
+
+    <!--nav menu-->
+    <string name="menu_match">Matches</string>
+    <string name="menu_teams">Teams</string>
+    <string name="menu_favorites">Favorites</string>
+
+    <!--tab menu-->
+    <string name="tab_prev">Previous</string>
+    <string name="tab_next">Next</string>
+    <string name="tab_team">Teams</string>
+    <string name="tab_match">Matches</string>
 </resources>
