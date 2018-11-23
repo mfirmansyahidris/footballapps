@@ -1,12 +1,10 @@
 package com.dev.fi.footballapps.ui
 
-import android.view.Menu
-import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.ui.favorite.FavoriteFragment
 import com.dev.fi.footballapps.ui.match.MatchFragment
-import com.dev.fi.footballschedule2.base.BaseActivity
+import com.dev.fi.footballapps.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : BaseActivity() {

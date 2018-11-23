@@ -1,9 +1,5 @@
-package com.dev.fi.footballschedule2.utils
+package com.dev.fi.footballapps.utils
 
-import android.app.Activity
-import android.os.Bundle
-import android.widget.FrameLayout
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter

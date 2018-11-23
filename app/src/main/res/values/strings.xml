@@ -33,4 +33,5 @@
 
     <!--lable-->
     <string name="content_vs">VS</string>
+    <string name="msg_emptyResult">No Result Found</string>
 </resources>

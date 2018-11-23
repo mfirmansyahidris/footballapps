@@ -1,4 +1,4 @@
-package com.dev.fi.footballschedule2.rest
+package com.dev.fi.footballapps.rest
 
 import com.dev.fi.footballapps.BuildConfig
 
@@ -20,7 +20,7 @@ object Api {
     }
 
     fun getSearchMatch(key: String): String{
-        return BuildConfig.BASE_URL + "api/v1/json/${BuildConfig.TSDB_API_KEY}" + "searchevents.php?e=" + key
+        return BuildConfig.BASE_URL + "api/v1/json/${BuildConfig.TSDB_API_KEY}" + "/searchevents.php?e=" + key
     }
 
 }

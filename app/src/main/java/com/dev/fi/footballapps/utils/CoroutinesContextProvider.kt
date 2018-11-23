@@ -1,4 +1,4 @@
-package com.dev.fi.footballschedule2.utils
+package com.dev.fi.footballapps.utils
 
 import kotlinx.coroutines.Dispatchers
 import kotlin.coroutines.CoroutineContext

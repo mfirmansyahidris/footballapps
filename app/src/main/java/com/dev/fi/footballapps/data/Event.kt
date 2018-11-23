@@ -1,4 +1,4 @@
-package com.dev.fi.footballschedule2.data.model
+package com.dev.fi.footballapps.data
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

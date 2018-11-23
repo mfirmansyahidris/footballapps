@@ -5,11 +5,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.ui.match.MatchFragment.Companion.nextMatchCountingIdlingResource
 import com.dev.fi.footballapps.utils.SpinnerListener2
-import com.dev.fi.footballschedule2.base.BaseFragment
-import com.dev.fi.footballschedule2.data.model.Event
-import com.dev.fi.footballschedule2.rest.Repository
-import com.dev.fi.footballschedule2.utils.invisible
-import com.dev.fi.footballschedule2.utils.visible
+import com.dev.fi.footballapps.base.BaseFragment
+import com.dev.fi.footballapps.data.Event
+import com.dev.fi.footballapps.rest.Repository
+import com.dev.fi.footballapps.utils.invisible
+import com.dev.fi.footballapps.utils.visible
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.fragment_match_child.*
 
@@ -51,6 +51,8 @@ class MatchNextFragment : BaseFragment(), MatchV, SpinnerListener2 {
         rv_match.visible()
         pb_process.invisible()
     }
+
+    override fun onEmpyResult() {}
 
     override fun showResult(data: List<Event>) {
         items.clear()

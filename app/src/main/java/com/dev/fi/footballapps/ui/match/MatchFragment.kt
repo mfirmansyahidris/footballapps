@@ -1,20 +1,17 @@
 package com.dev.fi.footballapps.ui.match
 
 import android.annotation.SuppressLint
-import android.app.SearchManager
-import android.content.Context
+import android.content.Intent
 import android.view.*
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.SearchView
 import android.widget.TextView
-import androidx.core.content.ContextCompat.getSystemService
 import androidx.test.espresso.idling.CountingIdlingResource
 import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.utils.SpinnerListener1
 import com.dev.fi.footballapps.utils.SpinnerListener2
-import com.dev.fi.footballschedule2.base.BaseFragment
-import com.dev.fi.footballschedule2.utils.ViewPagerAdapter
+import com.dev.fi.footballapps.base.BaseFragment
+import com.dev.fi.footballapps.utils.ViewPagerAdapter
 import kotlinx.android.synthetic.main.fragment_match.*
 import kotlinx.android.synthetic.main.toolbar.*
 
@@ -57,8 +54,20 @@ class MatchFragment : BaseFragment() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater?.inflate(R.menu.toolbar_menu, menu)
+        inflater?.inflate(R.menu.toolbar_menu_search, menu)
         super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        return when (item?.itemId) {
+            R.id.menu_search -> {
+                val intent = Intent(activity, MatchSearchActivity::class.java)
+                startActivity(intent)
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun setupTab(title: String, position: Int) {

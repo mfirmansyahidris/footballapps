@@ -1,5 +1,6 @@
-package com.dev.fi.footballschedule2.rest
+package com.dev.fi.footballapps.rest
 
+import com.orhanobut.logger.Logger
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
@@ -15,6 +16,7 @@ created by -manca-
 class Repository {
 
     fun doRequest(url: String): Deferred<String> = GlobalScope.async {
+        Logger.d(url)
         URL(url).readText()
     }
 }

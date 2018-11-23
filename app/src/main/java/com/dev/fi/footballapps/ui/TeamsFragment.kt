@@ -1,8 +1,7 @@
 package com.dev.fi.footballapps.ui
 
 import com.dev.fi.footballapps.R
-import com.dev.fi.footballschedule2.base.BaseFragment
-import com.dev.fi.footballschedule2.utils.ViewPagerAdapter
+import com.dev.fi.footballapps.base.BaseFragment
 
 /**
  ****************************************

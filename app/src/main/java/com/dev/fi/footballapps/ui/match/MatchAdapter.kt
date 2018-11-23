@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.fi.footballapps.R
-import com.dev.fi.footballschedule2.data.model.Event
-import com.dev.fi.footballschedule2.utils.reformatDate
+import com.dev.fi.footballapps.data.Event
+import com.dev.fi.footballapps.utils.reformatDate
 
 /**
  ****************************************

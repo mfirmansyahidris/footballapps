@@ -1,8 +1,7 @@
-package com.dev.fi.footballschedule2.utils
+package com.dev.fi.footballapps.utils
 
 import android.annotation.SuppressLint
 import android.view.View
-import android.widget.TextView
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -34,7 +33,7 @@ fun lineText(value: String?): String? {
         var newValue = value?.replace(";", ";\n", true)
         newValue = newValue?.replace("\n ", "\n", true)
         newValue
-    }else{
+    } else {
         value
     }
 }

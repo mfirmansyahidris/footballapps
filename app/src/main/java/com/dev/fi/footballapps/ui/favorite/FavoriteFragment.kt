@@ -3,8 +3,8 @@ package com.dev.fi.footballapps.ui.favorite
 import android.view.LayoutInflater
 import android.widget.TextView
 import com.dev.fi.footballapps.R
-import com.dev.fi.footballschedule2.base.BaseFragment
-import com.dev.fi.footballschedule2.utils.ViewPagerAdapter
+import com.dev.fi.footballapps.base.BaseFragment
+import com.dev.fi.footballapps.utils.ViewPagerAdapter
 import kotlinx.android.synthetic.main.fragment_match.*
 
 /**

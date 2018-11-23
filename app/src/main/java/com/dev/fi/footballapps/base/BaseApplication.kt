@@ -1,4 +1,4 @@
-package com.dev.fi.footballschedule2.base
+package com.dev.fi.footballapps.base
 
 import android.app.Application
 import com.orhanobut.logger.AndroidLogAdapter
@@ -19,7 +19,7 @@ class BaseApplication : Application() {
                 .showThreadInfo(false)
                 .methodCount(2)
                 .methodOffset(5)
-                .tag("FootballSchedule2")
+                .tag("dev.fi.footballapps")
                 .build()
         Logger.addLogAdapter(AndroidLogAdapter(formatStrategy))
     }

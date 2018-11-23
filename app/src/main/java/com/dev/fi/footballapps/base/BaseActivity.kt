@@ -1,4 +1,4 @@
-package com.dev.fi.footballschedule2.base
+package com.dev.fi.footballapps.base
 
 import android.annotation.SuppressLint
 import android.os.Bundle

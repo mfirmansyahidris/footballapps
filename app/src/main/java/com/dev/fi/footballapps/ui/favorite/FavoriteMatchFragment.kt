@@ -1,7 +1,7 @@
 package com.dev.fi.footballapps.ui.favorite
 
 import com.dev.fi.footballapps.R
-import com.dev.fi.footballschedule2.base.BaseFragment
+import com.dev.fi.footballapps.base.BaseFragment
 
 /**
  ****************************************

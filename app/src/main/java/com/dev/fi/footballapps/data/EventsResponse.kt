@@ -7,5 +7,5 @@ created by -manca-
  ****************************************
  */
 
-data class EventResponse(
-        val event: List<Event>)
+data class EventsResponse(
+        val events: List<Event>)
