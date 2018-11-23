@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/lc_detail"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <include layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_dateEvent"
+                    android:padding="@dimen/padding_horizon_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_size_normal"
+                    android:layout_gravity="center_horizontal"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/llContent"
+                    android:gravity="center"
+                    android:layout_height="120dp">
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:gravity="center_horizontal"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size">
+                            <ProgressBar
+                                android:id="@+id/pb_homePlaceholder"
+                                style="?android:attr/progressBarStyleLarge"
+                                android:layout_width="@dimen/progressbar_medium"
+                                android:layout_height="@dimen/progressbar_medium"
+                                android:layout_margin="20dp"
+                                android:visibility="visible"
+                                android:paddingVertical="@dimen/padding_horizon_normal" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iv_logoHome"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_strHomeTeam"
+                            android:gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/text_size_large"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_intHomeScore"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_size_extra_large2"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lable_vs"
+                        android:textSize="@dimen/text_size_large"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_intAwayScore"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_size_extra_large2"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:gravity="center_horizontal"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/image_size"
+                            android:layout_height="@dimen/image_size">
+                            <ProgressBar
+                                android:id="@+id/pb_awayPlaceholder"
+                                style="?android:attr/progressBarStyleLarge"
+                                android:layout_width="@dimen/progressbar_medium"
+                                android:layout_height="@dimen/progressbar_medium"
+                                android:layout_margin="20dp"
+                                android:visibility="visible"
+                                android:paddingVertical="@dimen/padding_horizon_normal" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/iv_logoAway"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"/>
+                        </RelativeLayout>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_strAwayTeam"
+                            android:gravity="center_horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/text_size_large"/>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View style="@style/Divider"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/llContent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_strHomeGoalDetails"
+                        style="@style/detailTextContent"
+                        android:gravity="left"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/detailTextContentTitle"
+                        android:text="@string/lable_goals"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_strAwayGoalDetails"
+                        android:gravity="right"
+                        style="@style/detailTextContent"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/llContent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_intHomeShots"
+                        style="@style/detailTextContent"
+                        android:gravity="left"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/detailTextContentTitle"
+                        android:text="@string/lable_shots"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_intAwayShots"
+                        android:gravity="right"
+                        style="@style/detailTextContent"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View style="@style/Divider"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:padding="@dimen/padding_horizon_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lable_lineups"
+                    android:textSize="@dimen/text_size_normal_x"
+                    android:layout_gravity="center_horizontal"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/llContent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_strHomeLinepupGoalkeeper"
+                        style="@style/detailTextContent"
+                        android:gravity="left"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/detailTextContentTitle"
+                        android:text="@string/lable_goalkeeper"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_strAwayLineupGoalkeeper"
+                        android:gravity="right"
+                        style="@style/detailTextContent"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/llContent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_strHomeLineupDefense"
+                        style="@style/detailTextContent"
+                        android:gravity="left"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/detailTextContentTitle"
+                        android:text="@string/lable_defense"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_strAwayLineupDefense"
+                        android:gravity="right"
+                        style="@style/detailTextContent"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/llContent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_strHomeLineupMidfield"
+                        style="@style/detailTextContent"
+                        android:gravity="left"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/detailTextContentTitle"
+                        android:text="@string/lable_midfield"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_strAwayLineupMidfield"
+                        android:gravity="right"
+                        style="@style/detailTextContent"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/llContent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_strHomeLineupForward"
+                        style="@style/detailTextContent"
+                        android:gravity="left"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/detailTextContentTitle"
+                        android:text="@string/lable_forward"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_strAwayLineupForward"
+                        android:gravity="right"
+                        style="@style/detailTextContent"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    style="@style/llContent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_strHomeLineupSubstitutes"
+                        style="@style/detailTextContent"
+                        android:gravity="left"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/detailTextContentTitle"
+                        android:text="@string/lable_subtitutes"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_strAwayLineupSubstitutes"
+                        android:gravity="right"
+                        style="@style/detailTextContent"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>

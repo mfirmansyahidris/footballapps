@@ -24,8 +24,18 @@ fun View.invisible() {
 fun reformatDate(value: String?): String? {
     val pFormat = SimpleDateFormat("yyyy-MM-dd")
     val date: Date = pFormat.parse(value)
-    val nformat = SimpleDateFormat("dd MMM yyyy")
+    val nformat = SimpleDateFormat("EEE, dd MMM yyyy")
     return nformat.format(date)
+}
+
+fun setToLocalTime(value: String?): String? {
+    return if(value != null){
+        val pFormat = SimpleDateFormat("HH:mm")
+        val date: Date = pFormat.parse(value)
+        pFormat.format(date)
+    }else{
+        ""
+    }
 }
 
 fun lineText(value: String?): String? {

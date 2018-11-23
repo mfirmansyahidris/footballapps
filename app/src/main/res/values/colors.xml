@@ -12,4 +12,6 @@
     <!--Text Color-->
     <color name="textTitle">#3A3E44</color>
     <color name="textSubtitle">#7D818B</color>
+
+    <color name="line">#dedede</color>
 </resources>

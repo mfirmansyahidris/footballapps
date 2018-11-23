@@ -1,4 +1,4 @@
-package com.dev.fi.footballapps.ui.match
+package com.dev.fi.footballapps.ui.detailMatch
 
 import com.dev.fi.footballapps.data.models.Event
 
@@ -9,9 +9,6 @@ created by -manca-
  ****************************************
  */
 
-interface MatchV {
-    fun onProcess()
-    fun onDone()
-    fun onEmpyResult()
-    fun showResult(data: List<Event>)
+interface DetailMatchV {
+    fun showDetail(data: Event)
 }

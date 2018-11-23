@@ -7,8 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.fi.footballapps.R
-import com.dev.fi.footballapps.data.Event
+import com.dev.fi.footballapps.data.models.Event
 import com.dev.fi.footballapps.utils.reformatDate
+import com.dev.fi.footballapps.utils.setToLocalTime
 
 /**
  ****************************************
@@ -30,6 +31,7 @@ class MatchAdapter(private val context: Context, private val items: List<Event>,
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val tvDateEvent = view.findViewById<TextView>(R.id.tv_dateEvent)
+        private val tvTimeEvent = view.findViewById<TextView>(R.id.tv_timeEvent)
         private val tvTeamHome = view.findViewById<TextView>(R.id.tv_teamHome)
         private val tvTeamHomeScore = view.findViewById<TextView>(R.id.tv_teamHomeScore)
         private val tvTeamAwayScore = view.findViewById<TextView>(R.id.tv_teamAwayScore)
@@ -37,6 +39,7 @@ class MatchAdapter(private val context: Context, private val items: List<Event>,
 
         fun bindItem(items: Event, listener: (Event) -> Unit) {
             tvDateEvent.text = reformatDate(items.dateEvent)
+            tvTimeEvent.text = setToLocalTime(items.strTime)
             tvTeamHome.text = items.strHomeTeam
             tvTeamHomeScore.text = items.intHomeScore
             tvTeamAwayScore.text = items.intAwayScore

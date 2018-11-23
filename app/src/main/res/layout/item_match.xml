@@ -1,74 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat android:orientation="vertical"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:clickable="true"
     android:foreground="?attr/selectableItemBackground"
-    android:paddingVertical="@dimen/padding_horizon_normal"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/padding_horizon_normal">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tv_dateEvent"
-            android:layout_width="wrap_content"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_dateEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorAccent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_timeEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorAccent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_horizon_xlong"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/padding_horizon_normal">
+
+        <TextView
+            android:id="@+id/tv_teamHome"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorAccent"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_weight="5"
+            android:gravity="right"
+            android:paddingHorizontal="@dimen/padding_horizon_long"
+            android:textColor="@color/textTitle"
+            android:textSize="@dimen/text_size_large" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:paddingTop="@dimen/padding_horizon_normal"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_teamHomeScore"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/padding_horizon_xlong"
-            android:orientation="horizontal">
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textColor="@color/textTitle"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_teamHome"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:paddingHorizontal="@dimen/padding_horizon_long"
-                android:layout_weight="5"
-                android:textSize="@dimen/text_size_large"
-                android:textColor="@color/textTitle"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/lable_vs"
+            android:textColor="@color/textTitle"
+            android:textSize="@dimen/text_size_normal" />
 
-            <TextView
-                android:id="@+id/tv_teamHomeScore"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_size_large"
-                android:textColor="@color/textTitle"/>
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:text="@string/content_vs"
-                android:textSize="@dimen/text_size_normal"
-                android:textColor="@color/textTitle"/>
+        <TextView
+            android:id="@+id/tv_teamAwayScore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textColor="@color/textTitle"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tv_teamAwayScore"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:gravity="center"
-                android:textStyle="bold"
-                android:textSize="@dimen/text_size_large"
-                android:textColor="@color/textTitle"/>
-
-            <TextView
-                android:id="@+id/tv_teamAway"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:paddingHorizontal="@dimen/padding_horizon_long"
-                android:layout_weight="5"
-                android:textSize="@dimen/text_size_large"
-                android:textColor="@color/textTitle"/>
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
+        <TextView
+            android:id="@+id/tv_teamAway"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:gravity="left"
+            android:paddingHorizontal="@dimen/padding_horizon_long"
+            android:textColor="@color/textTitle"
+            android:textSize="@dimen/text_size_large" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

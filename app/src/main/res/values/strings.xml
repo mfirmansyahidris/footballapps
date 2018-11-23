@@ -32,6 +32,22 @@
     </string-array>
 
     <!--lable-->
-    <string name="content_vs">VS</string>
+    <string name="lable_vs">VS</string>
     <string name="msg_emptyResult">No Result Found</string>
+    <string name="lable_goals">Goals</string>
+    <string name="lable_shots">Shots</string>
+    <string name="lable_lineups">Lineups</string>
+    <string name="lable_goalkeeper">Goal Keeper</string>
+    <string name="lable_defense">Defense</string>
+    <string name="lable_midfield">Midfield</string>
+    <string name="lable_forward">Forward</string>
+    <string name="lable_subtitutes">Subtitutes</string>
+
+    <!--title-->
+    <string name="title_detailMatch">Detail Match</string>
+    <string name="title_detailMenu">Favorite</string>
+
+    <!--message-->
+    <string name="msg_addToFavorite">Added to Favorite</string>
+    <string name="msg_removeFromFavorite">Remove from Favorite</string>
 </resources>

@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.match.MatchSearchActivity" />
+        <activity android:name=".ui.detailMatch.DetailMatchActivity" />
     </application>
 
 </manifest>
