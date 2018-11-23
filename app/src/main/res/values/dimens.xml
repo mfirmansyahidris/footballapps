@@ -12,4 +12,14 @@
     <dimen name="text_size_extra_large4">36.0sp</dimen>
     <dimen name="text_size_extra_large5">45.0sp</dimen>
 
+    <!--progressbar-->
+    <dimen name="progressbar_medium">45dp</dimen>
+
+    <dimen name="padding_horizon_normal">8dp</dimen>
+    <dimen name="padding_horizon_long">10dp</dimen>
+    <dimen name="padding_horizon_xlong">13dp</dimen>
+
+
+    <dimen name="image_size">75dp</dimen>
+
 </resources>

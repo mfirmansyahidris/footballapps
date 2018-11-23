@@ -1,5 +1,7 @@
 package com.dev.fi.footballapps.ui
 
+import android.view.Menu
+import android.view.MenuItem
 import androidx.fragment.app.Fragment
 import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.ui.favorite.FavoriteFragment
@@ -16,14 +18,14 @@ class HomeActivity : BaseActivity() {
 
     override fun mainCode() {
         bn_menu.setOnNavigationItemSelectedListener { item ->
-            when(item.itemId){
+            when (item.itemId) {
                 R.id.navmenu_match -> openFragment(MatchFragment(), getString(R.string.menu_match))
-                R.id.navmenu_teams-> openFragment(TeamsFragment(), getString(R.string.menu_teams))
-                R.id.navmenu_favorites-> openFragment(FavoriteFragment(), getString(R.string.menu_favorites))
+                R.id.navmenu_teams -> openFragment(TeamsFragment(), getString(R.string.menu_teams))
+                R.id.navmenu_favorites -> openFragment(FavoriteFragment(), getString(R.string.menu_favorites))
             }
             true
         }
-        bn_menu.selectedItemId  = R.id.navmenu_match
+        bn_menu.selectedItemId = R.id.navmenu_match
     }
 
     private fun openFragment(fragment: Fragment, title: String) {
