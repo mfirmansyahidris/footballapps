@@ -53,6 +53,12 @@ class MatchFragment : BaseFragment() {
 
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
+        activity.setSupportActionBar(main_toolbar)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+        inflater?.inflate(R.menu.toolbar_menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
     private fun setupTab(title: String, position: Int) {

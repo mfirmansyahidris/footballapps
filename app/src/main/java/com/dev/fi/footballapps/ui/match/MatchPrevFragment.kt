@@ -43,11 +43,13 @@ class MatchPrevFragment : BaseFragment(), MatchV, SpinnerListener1 {
 
     override fun onProcess() {
         prevMatchCountingIdlingResource.increment()
+        rv_match.invisible()
         pb_process.visible()
     }
 
     override fun onDone() {
         prevMatchCountingIdlingResource.decrement()
+        rv_match.visible()
         pb_process.invisible()
     }
 
