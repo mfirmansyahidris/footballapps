@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_horizon_normal">
+
+    <RelativeLayout
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size">
+        <ProgressBar
+            android:id="@+id/pb_placeholder"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="@dimen/progressbar_medium"
+            android:layout_height="@dimen/progressbar_medium"
+            android:layout_margin="20dp"
+            android:visibility="visible"
+            android:paddingVertical="@dimen/padding_horizon_normal" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginHorizontal="@dimen/padding_horizon_normal"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/textTitle"
+        android:textSize="@dimen/text_size_large"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_teamName"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

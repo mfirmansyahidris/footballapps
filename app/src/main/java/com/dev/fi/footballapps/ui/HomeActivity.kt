@@ -5,6 +5,7 @@ import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.ui.favorite.FavoriteFragment
 import com.dev.fi.footballapps.ui.match.MatchFragment
 import com.dev.fi.footballapps.base.BaseActivity
+import com.dev.fi.footballapps.ui.teams.TeamsFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : BaseActivity() {

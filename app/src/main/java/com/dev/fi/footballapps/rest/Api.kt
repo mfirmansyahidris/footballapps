@@ -27,4 +27,8 @@ object Api {
         return BuildConfig.BASE_URL + "api/v1/json/${BuildConfig.TSDB_API_KEY}" + "/lookupteam.php?id=" + id
     }
 
+    fun getTeams(id: String?): String {
+        return BuildConfig.BASE_URL + "api/v1/json/${BuildConfig.TSDB_API_KEY}" + "/lookup_all_teams.php?id=" + id
+    }
+
 }

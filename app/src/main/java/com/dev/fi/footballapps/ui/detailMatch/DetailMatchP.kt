@@ -10,9 +10,11 @@ import com.dev.fi.footballapps.utils.CoroutineContextProvider
 import com.dev.fi.footballapps.utils.invisible
 import com.dev.fi.footballapps.utils.visible
 import com.google.gson.Gson
+import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.lang.Exception
 
 /**
  ****************************************
@@ -36,8 +38,10 @@ class DetailMatchP(private val view: DetailMatchV, private val repository: Repos
                     TeamResponse::class.java)
 
             val url = data.teams[0].strTeamBadge.toString()
-            if (url != null) Picasso.get().load(url).into(image)
-            placeholder.invisible()
+            if (url != null) Picasso.get().load(url).into(image, object : Callback{
+                override fun onSuccess() {placeholder.invisible() }
+                override fun onError(e: Exception?) {}
+            })
         }
     }
 
