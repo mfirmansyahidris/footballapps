@@ -54,8 +54,6 @@ class MatchPrevFragment : BaseFragment(), MatchV, SpinnerListener1 {
         pb_process.invisible()
     }
 
-    override fun onEmpyResult() {}
-
     override fun showResult(data: List<Event>) {
         items.clear()
         items.addAll(data)

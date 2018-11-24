@@ -1,4 +1,4 @@
-package com.dev.fi.footballapps.ui.match
+package com.dev.fi.footballapps.ui.search
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -9,12 +9,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.base.BaseActivity
 import com.dev.fi.footballapps.data.models.Event
+import com.dev.fi.footballapps.data.models.Team
 import com.dev.fi.footballapps.rest.Repository
 import com.dev.fi.footballapps.ui.detailMatch.DetailMatchActivity
+import com.dev.fi.footballapps.ui.match.MatchAdapter
+import com.dev.fi.footballapps.ui.match.MatchP
+import com.dev.fi.footballapps.ui.match.MatchV
+import com.dev.fi.footballapps.ui.teams.TeamsAdapter
 import com.dev.fi.footballapps.utils.invisible
 import com.dev.fi.footballapps.utils.visible
 import com.google.gson.Gson
-import kotlinx.android.synthetic.main.activity_match_search.*
+import kotlinx.android.synthetic.main.activity_search.*
 
 /**
  ****************************************
@@ -23,10 +28,10 @@ created by -manca-
  ****************************************
  */
 
-class MatchSearchActivity : BaseActivity(), MatchV {
-    private var items: MutableList<Event> = mutableListOf()
-    private lateinit var presenter: MatchP
-    override fun getLayoutResource(): Int = R.layout.activity_match_search
+class SearchActivity : BaseActivity(), SearchV {
+    private lateinit var presenter: SearchP
+    private lateinit var searchType: String
+    override fun getLayoutResource(): Int = R.layout.activity_search
 
     override fun getToolbarResource(): Int = R.id.main_toolbar
 
@@ -39,7 +44,9 @@ class MatchSearchActivity : BaseActivity(), MatchV {
 
         val request = Repository()
         val gson = Gson()
-        presenter = MatchP(this, request, gson)
+        presenter = SearchP(this, request, gson)
+
+        searchType = intent.getStringExtra("request")
 
         sv_match.onActionViewExpanded()
         sv_match.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
@@ -49,8 +56,11 @@ class MatchSearchActivity : BaseActivity(), MatchV {
 
             override fun onQueryTextChange(newText: String?): Boolean {
                 if (newText?.length!! > 3) {
-                    Log.d("Tagg", newText)
-                    presenter.getSearchMatch(newText)
+                    if(searchType == "match"){
+                        presenter.getSearchMatch(newText)
+                    }else if(searchType == "teams"){
+                        presenter.getSearchTeam(newText)
+                    }
                 }
                 return true
             }
@@ -82,13 +92,33 @@ class MatchSearchActivity : BaseActivity(), MatchV {
         rv_searchResult.invisible()
     }
 
-    override fun showResult(data: List<Event>) {
+    override fun showResult(data: List<Any>) {
+        if(searchType == "match"){
+            loadMatch(data as List<Event>)
+        }else if (searchType == "teams"){
+            loadTeam(data as List<Team>)
+        }
+    }
+
+    private fun loadMatch(data: List<Event>){
+        val items: MutableList<Event> = mutableListOf()
         items.clear()
         items.addAll(data)
         rv_searchResult.adapter = MatchAdapter(this, items) {
             val intent = Intent(this, DetailMatchActivity::class.java)
             intent.putExtra("event", it)
             startActivity(intent)
+        }
+    }
+
+    private fun loadTeam(data: List<Team>){
+        val items: MutableList<Team> = mutableListOf()
+        items.clear()
+        items.addAll(data)
+        rv_searchResult.adapter = TeamsAdapter(this, items) {
+//            val intent = Intent(this, DetailMatchActivity::class.java)
+//            intent.putExtra("team", it)
+//            startActivity(intent)
         }
     }
 }

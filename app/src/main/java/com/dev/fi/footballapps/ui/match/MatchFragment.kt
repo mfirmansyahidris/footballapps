@@ -11,6 +11,7 @@ import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.utils.SpinnerListener1
 import com.dev.fi.footballapps.utils.SpinnerListener2
 import com.dev.fi.footballapps.base.BaseFragment
+import com.dev.fi.footballapps.ui.search.SearchActivity
 import com.dev.fi.footballapps.utils.ViewPagerAdapter
 import kotlinx.android.synthetic.main.fragment_match.*
 import kotlinx.android.synthetic.main.toolbar.*
@@ -61,7 +62,8 @@ class MatchFragment : BaseFragment() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         return when (item?.itemId) {
             R.id.menu_search -> {
-                val intent = Intent(activity, MatchSearchActivity::class.java)
+                val intent = Intent(activity, SearchActivity::class.java)
+                intent.putExtra("request", "match")
                 startActivity(intent)
                 true
             }

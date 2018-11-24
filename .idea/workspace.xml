@@ -16,11 +16,16 @@
   <component name="ChangeListManager">
     <list default="true" id="b951ddf0-e584-44ac-9026-d8ea29578a13" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/rest/Api.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/rest/Api.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/HomeActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/TeamsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/teams/TeamsFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/detailMatch/DetailMatchP.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/detailMatch/DetailMatchP.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_teams.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_teams.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchNextFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchNextFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchP.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchP.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchPrevFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchPrevFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchSearchActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/search/SearchActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchV.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchV.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/teams/TeamsFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/teams/TeamsFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_match_search.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_search.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,20 +48,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MatchSearchActivity.kt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchSearchActivity.kt">
+      <file leaf-file-name="SearchActivity.kt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/search/SearchActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="87" column="23" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="23" />
+            <state relative-caret-position="454">
+              <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatchP.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchP.kt">
+      <file leaf-file-name="TeamsFragment.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/teams/TeamsFragment.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+            <state relative-caret-position="-64">
+              <caret line="68" column="37" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
+              <folding>
+                <element signature="e#42#766#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2530,11 +2538,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/TeamsFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/toolbar_menu.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/toolbar_menu_match.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/toolbar_menu_search_action.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_match_search.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/utils/CoroutinesContextProvider.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/utils/ViewPagerAdapter.kt" />
@@ -2546,8 +2549,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/rest/Repository.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/data/EventResponse.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/data/EventsResponse.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchV.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchP.kt" />
         <option value="$PROJECT_DIR$/app/src/test/java/com/dev/fi/footballapps/utils/UtilsKtTest.java" />
         <option value="$PROJECT_DIR$/app/src/test/java/com/dev/fi/footballapps/utils/UtilsKtTest.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchAdapter.kt" />
@@ -2571,15 +2572,22 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/teams/TeamsV.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_teams.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/teams/TeamsP.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/rest/Api.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/detailMatch/TeamsAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/detailMatch/DetailMatchP.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/teams/TeamsAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_teams.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/utils/utils.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchSearchActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/search/MatchSearchActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/search/SearchV.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchV.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchPrevFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchP.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchNextFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/rest/Api.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/search/SearchP.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/search/SearchActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/teams/TeamsFragment.kt" />
       </list>
     </option>
@@ -2680,6 +2688,14 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="footballapps" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="search" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FootballApps" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="footballapps" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
               <item name="teams" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -2719,6 +2735,7 @@
       <recent name="com.dev.fi.footballapps.utils" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.dev.fi.footballapps.ui.search" />
       <recent name="com.dev.fi.footballapps.ui.teams" />
       <recent name="com.dev.fi.footballapps.data.tables" />
       <recent name="com.dev.fi.footballapps.data.models" />
@@ -2956,20 +2973,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/base/BaseActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/favorite/FavoriteTeamFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/favorite/FavoriteMatchFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -3019,7 +3022,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_match_search.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_search.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
@@ -3175,13 +3178,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchV.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" selection-start-line="11" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail_match.xml">
       <provider editor-type-id="android-designer2">
         <state />
@@ -3227,13 +3223,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="11" column="35" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/rest/Api.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -3284,31 +3273,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchPrevFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="65" column="9" selection-start-line="61" selection-start-column="8" selection-end-line="65" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchAdapter.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="41" column="59" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/teams/TeamsAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="537">
           <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchNextFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="65" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -3326,34 +3294,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/teams/TeamsFragment.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/rest/Api.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="29" column="42" lean-forward="true" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-          <folding>
-            <element signature="e#42#736#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="414">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="50" />
+        <state relative-caret-position="231">
+          <caret line="66" column="37" selection-start-line="66" selection-start-column="37" selection-end-line="66" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchNextFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/search/SearchV.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/search/SearchP.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="916">
+          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+          <folding>
+            <element signature="e#43#347#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchAdapter.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="41" column="59" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchV.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchP.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
+        <state relative-caret-position="517">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchSearchActivity.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/match/MatchPrevFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="87" column="23" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="23" />
+        <state relative-caret-position="286">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/search/SearchActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/dev/fi/footballapps/ui/teams/TeamsFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-64">
+          <caret line="68" column="37" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="37" />
+          <folding>
+            <element signature="e#42#766#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

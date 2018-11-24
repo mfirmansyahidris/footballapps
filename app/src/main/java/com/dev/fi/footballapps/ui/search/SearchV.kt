@@ -1,6 +1,4 @@
-package com.dev.fi.footballapps.ui.match
-
-import com.dev.fi.footballapps.data.models.Event
+package com.dev.fi.footballapps.ui.search
 
 /**
  ****************************************
@@ -9,8 +7,9 @@ created by -manca-
  ****************************************
  */
 
-interface MatchV {
+interface SearchV {
     fun onProcess()
     fun onDone()
-    fun showResult(data: List<Event>)
+    fun onEmpyResult()
+    fun showResult(data: List<Any>)
 }

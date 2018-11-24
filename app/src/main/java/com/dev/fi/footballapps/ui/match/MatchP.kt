@@ -29,8 +29,6 @@ class MatchP(private val view: MatchV,
             if (data.events != null) {
                 view.showResult(data.events)
                 view.onDone()
-            }else{
-                view.onEmpyResult()
             }
         }
     }
@@ -45,24 +43,6 @@ class MatchP(private val view: MatchV,
             if (data.events != null) {
                 view.showResult(data.events)
                 view.onDone()
-            }else{
-                view.onEmpyResult()
-            }
-        }
-    }
-
-    fun getSearchMatch(key: String) {
-        view.onProcess()
-        GlobalScope.launch(context.main) {
-            val data = gson.fromJson(repository
-                    .doRequest(Api.getSearchMatch(key)).await(),
-                    EventResponse::class.java)
-
-            if (data.event != null) {
-                view.showResult(data.event)
-                view.onDone()
-            }else{
-                view.onEmpyResult()
             }
         }
     }

@@ -1,5 +1,6 @@
 package com.dev.fi.footballapps.ui.teams
 
+import android.content.Intent
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -12,6 +13,7 @@ import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.base.BaseFragment
 import com.dev.fi.footballapps.data.models.Team
 import com.dev.fi.footballapps.rest.Repository
+import com.dev.fi.footballapps.ui.search.SearchActivity
 import com.dev.fi.footballapps.utils.invisible
 import com.dev.fi.footballapps.utils.visible
 import com.google.gson.Gson
@@ -62,8 +64,9 @@ class TeamsFragment: BaseFragment(), TeamsV{
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         return when (item?.itemId) {
             R.id.menu_search -> {
-//                val intent = Intent(activity, MatchSearchActivity::class.java)
-//                startActivity(intent)
+                val intent = Intent(activity, SearchActivity::class.java)
+                intent.putExtra("request", "teams")
+                startActivity(intent)
                 true
             }
 
