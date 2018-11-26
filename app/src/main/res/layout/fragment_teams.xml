@@ -6,7 +6,6 @@
 
     <include layout="@layout/toolbar" />
 
-    <!-- TODO: Update blank fragment layout -->
 
     <androidx.appcompat.widget.AppCompatSpinner
         android:id="@+id/sp_leagues"

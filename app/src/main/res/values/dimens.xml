@@ -19,8 +19,10 @@
     <dimen name="padding_horizon_normal">8dp</dimen>
     <dimen name="padding_horizon_long">10dp</dimen>
     <dimen name="padding_horizon_xlong">13dp</dimen>
+    <dimen name="padding_imageToolbar">20dp</dimen>
 
 
     <dimen name="image_size">75dp</dimen>
+    <dimen name="image_size_large">100dp</dimen>
 
 </resources>

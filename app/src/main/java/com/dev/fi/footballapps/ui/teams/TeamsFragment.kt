@@ -13,6 +13,7 @@ import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.base.BaseFragment
 import com.dev.fi.footballapps.data.models.Team
 import com.dev.fi.footballapps.rest.Repository
+import com.dev.fi.footballapps.ui.detailTeam.DetailTeamActivity
 import com.dev.fi.footballapps.ui.search.SearchActivity
 import com.dev.fi.footballapps.utils.invisible
 import com.dev.fi.footballapps.utils.visible
@@ -84,13 +85,13 @@ class TeamsFragment: BaseFragment(), TeamsV{
         pb_process.invisible()
     }
 
-    override fun onEmpyResult() {}
-
     override fun showResult(data: List<Team>) {
         items.clear()
         items.addAll(data)
         rv_teams.adapter = TeamsAdapter(activity, items) {
-            //TODO: team detail listenet
+            val intent = Intent(activity, DetailTeamActivity::class.java)
+            intent.putExtra("teams", it)
+            startActivity(intent)
         }
     }
 

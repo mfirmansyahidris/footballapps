@@ -45,6 +45,9 @@ dependencies {
     implementation "androidx.cardview:cardview:$androidx_version"
     implementation "androidx.constraintlayout:constraintlayout:2.0.0-alpha2"
 
+    //Circle image View
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
     //Logging
     implementation "com.orhanobut:logger:2.2.0"
     implementation "com.squareup.okhttp3:logging-interceptor:3.11.0"

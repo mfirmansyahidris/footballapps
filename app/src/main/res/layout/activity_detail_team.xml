@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/toolbar" />
+    <include layout="@layout/toolbar_image" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -19,18 +19,6 @@
             app:tabIndicatorColor="@color/white"
             app:tabSelectedTextColor="@color/white"
             app:tabTextColor="@color/white80" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="4dp"
-            android:background="@drawable/shadow_down"/>
-
-        <androidx.appcompat.widget.AppCompatSpinner
-            android:id="@+id/sp_leagues"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/padding_horizon_normal"
-            android:layout_marginBottom="@dimen/padding_horizon_normal" />
-
         <View
             android:layout_width="match_parent"
             android:layout_height="4dp"

@@ -1,6 +1,8 @@
 package com.dev.fi.footballapps.data.models
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 /**
  ****************************************
@@ -9,6 +11,7 @@ created by -manca-
  ****************************************
  */
 
+@Parcelize
 data class Team(
         @SerializedName("idTeam")
         var idTeam: String? = "",
@@ -160,4 +163,4 @@ data class Team(
         @SerializedName("strLocked")
         var strLocked: String? = ""
 
-)
+) : Parcelable

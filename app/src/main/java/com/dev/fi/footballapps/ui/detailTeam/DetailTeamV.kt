@@ -1,6 +1,6 @@
-package com.dev.fi.footballapps.ui.teams
+package com.dev.fi.footballapps.ui.detailTeam
 
-import com.dev.fi.footballapps.data.models.Team
+import com.dev.fi.footballapps.data.models.Player
 
 /**
  ****************************************
@@ -9,8 +9,8 @@ created by -manca-
  ****************************************
  */
 
-interface TeamsV {
+interface DetailTeamV {
     fun onProcess()
     fun onDone()
-    fun showResult(data: List<Team>)
+    fun showResult(data: List<Player>)
 }

@@ -7,7 +7,6 @@
 
     <include layout="@layout/toolbar" />
 
-    <!-- TODO: Update blank fragment layout -->
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tl_main"
         android:layout_width="match_parent"

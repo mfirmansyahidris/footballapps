@@ -12,6 +12,8 @@
     <string name="tab_next">Next</string>
     <string name="tab_team">Teams</string>
     <string name="tab_match">Matches</string>
+    <string name="tab_overview">Overview</string>
+    <string name="tab_player">Player</string>
 
     <string-array name="list_leagueName">
         <item>English Premier League</item>
@@ -42,6 +44,8 @@
     <string name="lable_midfield">Midfield</string>
     <string name="lable_forward">Forward</string>
     <string name="lable_subtitutes">Subtitutes</string>
+    <string name="lable_weight">Weight(Kg)</string>
+    <string name="lable_height">Height(m)</string>
 
     <!--title-->
     <string name="title_detailMatch">Detail Match</string>

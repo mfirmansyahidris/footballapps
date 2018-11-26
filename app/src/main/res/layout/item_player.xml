@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_horizon_normal">
+
+    <RelativeLayout
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size">
+        <ProgressBar
+            android:id="@+id/pb_placeholder"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="@dimen/progressbar_medium"
+            android:layout_height="@dimen/progressbar_medium"
+            android:layout_margin="20dp"
+            android:visibility="visible"
+            android:paddingVertical="@dimen/padding_horizon_normal" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_thumb"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="3dp"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginHorizontal="@dimen/padding_horizon_normal"
+            android:textColor="@color/textTitle"
+            android:textSize="@dimen/text_size_large"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_playerName"/>
+        <TextView
+            android:layout_marginHorizontal="@dimen/padding_horizon_normal"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size_normal"
+            android:gravity="right"
+            android:textStyle="italic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_playerPosition"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
