@@ -1,6 +1,6 @@
 package com.dev.fi.footballapps.ui.detailMatch
 
-import com.dev.fi.footballapps.data.models.Event
+import com.dev.fi.footballapps.data.Event
 
 /**
  ****************************************

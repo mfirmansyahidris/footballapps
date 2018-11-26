@@ -3,7 +3,7 @@ package com.dev.fi.footballapps.ui.detailTeam
 import android.view.MenuItem
 import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.base.BaseActivity
-import com.dev.fi.footballapps.data.models.Player
+import com.dev.fi.footballapps.data.Player
 import com.dev.fi.footballapps.utils.invisible
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso

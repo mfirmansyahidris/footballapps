@@ -5,8 +5,8 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.base.BaseFragment
-import com.dev.fi.footballapps.data.models.Player
-import com.dev.fi.footballapps.data.models.Team
+import com.dev.fi.footballapps.data.Player
+import com.dev.fi.footballapps.data.Team
 import com.dev.fi.footballapps.rest.Repository
 import com.dev.fi.footballapps.utils.invisible
 import com.dev.fi.footballapps.utils.visible

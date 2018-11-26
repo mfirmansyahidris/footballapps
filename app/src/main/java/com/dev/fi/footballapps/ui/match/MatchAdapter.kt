@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.fi.footballapps.R
-import com.dev.fi.footballapps.data.models.Event
+import com.dev.fi.footballapps.data.Event
 import com.dev.fi.footballapps.utils.reformatDate
 import com.dev.fi.footballapps.utils.setToLocalTime
 

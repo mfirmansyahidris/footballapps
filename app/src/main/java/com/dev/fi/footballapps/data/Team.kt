@@ -1,4 +1,4 @@
-package com.dev.fi.footballapps.data.models
+package com.dev.fi.footballapps.data
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
@@ -163,4 +163,58 @@ data class Team(
         @SerializedName("strLocked")
         var strLocked: String? = ""
 
-) : Parcelable
+) : Parcelable{
+        companion object {
+                const val TABLE_TEAMS: String = "TABLE_TEAMS"
+                const val IDTEAM: String = "IDTEAM"
+                const val IDSOCCERXML: String = "IDSOCCERXML"
+                const val INTLOVED: String = "INTLOVED"
+                const val STRTEAM: String = "STRTEAM"
+                const val STRTEAMSHORT: String = "STRTEAMSHORT"
+                const val STRALTERNATE: String = "STRALTERNATE"
+                const val INTFORMEDYEAR: String = "INTFORMEDYEAR"
+                const val STRSPORT: String = "STRSPORT"
+                const val STRLEAGUE: String = "STRLEAGUE"
+                const val IDLEAGUE: String = "IDLEAGUE"
+                const val STRDIVISION: String = "STRDIVISION"
+                const val STRMANAGER: String = "STRMANAGER"
+                const val STRSTADIUM: String = "STRSTADIUM"
+                const val STRKEYWORDS: String = "STRKEYWORDS"
+                const val STRRSS: String = "STRRSS"
+                const val STRSTADIUMTHUMB: String = "STRSTADIUMTHUMB"
+                const val STRSTADIUMDESCRIPTION: String = "STRSTADIUMDESCRIPTION"
+                const val STRSTADIUMLOCATION: String = "STRSTADIUMLOCATION"
+                const val INTSTADIUMCAPACITY: String = "INTSTADIUMCAPACITY"
+                const val STRWEBSITE: String = "STRWEBSITE"
+                const val STRFACEBOOK: String = "STRFACEBOOK"
+                const val STRTWITTER: String = "STRTWITTER"
+                const val STRINSTAGRAM: String = "STRINSTAGRAM"
+                const val STRDESCRIPTIONEN: String = "STRDESCRIPTIONEN"
+                const val STRDESCRIPTIONDE: String = "STRDESCRIPTIONDE"
+                const val STRDESCRIPTIONFR: String = "STRDESCRIPTIONFR"
+                const val STRDESCRIPTIONCN: String = "STRDESCRIPTIONCN"
+                const val STRDESCRIPTIONIT: String = "STRDESCRIPTIONIT"
+                const val STRDESCRIPTIONJP: String = "STRDESCRIPTIONJP"
+                const val STRDESCRIPTIONRU: String = "STRDESCRIPTIONRU"
+                const val STRDESCRIPTIONES: String = "STRDESCRIPTIONES"
+                const val STRDESCRIPTIONPT: String = "STRDESCRIPTIONPT"
+                const val STRDESCRIPTIONSE: String = "STRDESCRIPTIONSE"
+                const val STRDESCRIPTIONNL: String = "STRDESCRIPTIONNL"
+                const val STRDESCRIPTIONHU: String = "STRDESCRIPTIONHU"
+                const val STRDESCRIPTIONNO: String = "STRDESCRIPTIONNO"
+                const val STRDESCRIPTIONIL: String = "STRDESCRIPTIONIL"
+                const val STRDESCRIPTIONPL: String = "STRDESCRIPTIONPL"
+                const val STRGENDER: String = "STRGENDER"
+                const val STRCOUNTRY: String = "STRCOUNTRY"
+                const val STRTEAMBADGE: String = "STRTEAMBADGE"
+                const val STRTEAMJERSEY: String = "STRTEAMJERSEY"
+                const val STRTEAMLOGO: String = "STRTEAMLOGO"
+                const val STRTEAMFANART1: String = "STRTEAMFANART1"
+                const val STRTEAMFANART2: String = "STRTEAMFANART2"
+                const val STRTEAMFANART3: String = "STRTEAMFANART3"
+                const val STRTEAMFANART4: String = "STRTEAMFANART4"
+                const val STRTEAMBANNER: String = "STRTEAMBANNER"
+                const val STRYOUTUBE: String = "STRYOUTUBE"
+                const val STRLOCKED: String = "STRLOCKED"
+        }
+}

@@ -9,7 +9,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.fi.footballapps.R
-import com.dev.fi.footballapps.data.models.Team
+import com.dev.fi.footballapps.data.Team
 import com.dev.fi.footballapps.utils.invisible
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso

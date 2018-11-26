@@ -1,4 +1,4 @@
-package com.dev.fi.footballapps.data.models
+package com.dev.fi.footballapps.data
 
 /**
  ****************************************
@@ -7,5 +7,5 @@ created by -manca-
  ****************************************
  */
 
-data class TeamResponse(
-        val teams: List<Team>)
+data class EventsResponse(
+        val events: List<Event>)

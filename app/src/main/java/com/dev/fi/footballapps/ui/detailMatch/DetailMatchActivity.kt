@@ -5,10 +5,9 @@ import android.view.MenuItem
 import androidx.core.content.ContextCompat
 import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.base.BaseActivity
-import com.dev.fi.footballapps.data.models.Event
-import com.dev.fi.footballapps.data.tables.FavoriteMatch
+import com.dev.fi.footballapps.data.Event
 import com.dev.fi.footballapps.rest.Repository
-import com.dev.fi.footballapps.utils.data.DataFavorite
+import com.dev.fi.footballapps.utils.dbObject.DataEvent
 import com.dev.fi.footballapps.utils.lineText
 import com.dev.fi.footballapps.utils.reformatDate
 import com.google.gson.Gson
@@ -21,7 +20,7 @@ created by -manca-
  ****************************************
  */
 
-class DetailMatchActivity: BaseActivity(), DetailMatchV{
+class DetailMatchActivity : BaseActivity(), DetailMatchV {
     private lateinit var presenter: DetailMatchP
     private var menuItem: Menu? = null
     private lateinit var event: Event
@@ -84,62 +83,62 @@ class DetailMatchActivity: BaseActivity(), DetailMatchV{
                 true
             }
             R.id.add_to_favorite -> {
-                if (isFavorite) DataFavorite.delete(this, lc_detail, event.idEvent.toString())
+                if (isFavorite) DataEvent.delete(this, lc_detail, event.idEvent.toString())
                 else {
                     val hashMap = LinkedHashMap<String, String?>()
-                    hashMap[FavoriteMatch.IDEVENT] = event.idEvent
-                    hashMap[FavoriteMatch.IDSOCCERXML] = event.idSoccerXML
-                    hashMap[FavoriteMatch.STREVENT] = event.strEvent
-                    hashMap[FavoriteMatch.STRFILENAME] = event.strFilename
-                    hashMap[FavoriteMatch.STRSPORT] = event.strSport
-                    hashMap[FavoriteMatch.IDLEAGUE] = event.idLeague
-                    hashMap[FavoriteMatch.STRLEAGUE] = event.strLeague
-                    hashMap[FavoriteMatch.STRSEASON] = event.strSeason
-                    hashMap[FavoriteMatch.STRDESCRIPTIONEN] = event.strDescriptionEN
-                    hashMap[FavoriteMatch.STRHOMETEAM] = event.strHomeTeam
-                    hashMap[FavoriteMatch.STRAWAYTEAM] = event.strAwayTeam
-                    hashMap[FavoriteMatch.INTHOMESCORE] = event.intHomeScore
-                    hashMap[FavoriteMatch.INTROUND] = event.intRound
-                    hashMap[FavoriteMatch.INTAWAYSCORE] = event.intAwayScore
-                    hashMap[FavoriteMatch.INTSPECTATORS] = event.intSpectators
-                    hashMap[FavoriteMatch.STRHOMEGOALDETAILS] = event.strHomeGoalDetails
-                    hashMap[FavoriteMatch.STRHOMEREDCARDS] = event.strHomeRedCards
-                    hashMap[FavoriteMatch.STRHOMEYELLOWCARDS] = event.strHomeYellowCards
-                    hashMap[FavoriteMatch.STRHOMELINEUPGOALKEEPER] = event.strHomeLineupGoalkeeper
-                    hashMap[FavoriteMatch.STRHOMELINEUPDEFENSE] = event.strHomeLineupDefense
-                    hashMap[FavoriteMatch.STRHOMELINEUPMIDFIELD] = event.strHomeLineupMidfield
-                    hashMap[FavoriteMatch.STRHOMELINEUPFORWARD] = event.strHomeLineupForward
-                    hashMap[FavoriteMatch.STRHOMELINEUPSUBSTITUTES] = event.strHomeLineupSubstitutes
-                    hashMap[FavoriteMatch.STRHOMEFORMATION] = event.strHomeFormation
-                    hashMap[FavoriteMatch.STRAWAYREDCARDS] = event.strAwayRedCards
-                    hashMap[FavoriteMatch.STRAWAYYELLOWCARDS] = event.strAwayYellowCards
-                    hashMap[FavoriteMatch.STRAWAYGOALDETAILS] = event.strAwayGoalDetails
-                    hashMap[FavoriteMatch.STRAWAYLINEUPGOALKEEPER] = event.strAwayLineupGoalkeeper
-                    hashMap[FavoriteMatch.STRAWAYLINEUPDEFENSE] = event.strAwayLineupDefense
-                    hashMap[FavoriteMatch.STRAWAYLINEUPMIDFIELD] = event.strAwayLineupMidfield
-                    hashMap[FavoriteMatch.STRAWAYLINEUPFORWARD] = event.strAwayLineupForward
-                    hashMap[FavoriteMatch.STRAWAYLINEUPSUBSTITUTES] = event.strAwayLineupSubstitutes
-                    hashMap[FavoriteMatch.STRAWAYFORMATION] = event.strAwayFormation
-                    hashMap[FavoriteMatch.INTHOMESHOTS] = event.intHomeShots
-                    hashMap[FavoriteMatch.INTAWAYSHOTS] = event.intAwayShots
-                    hashMap[FavoriteMatch.DATEEVENT] = event.dateEvent
-                    hashMap[FavoriteMatch.STRDATE] = event.strDate
-                    hashMap[FavoriteMatch.STRTIME] = event.strTime
-                    hashMap[FavoriteMatch.STRTVSTATION] = event.strTVStation
-                    hashMap[FavoriteMatch.IDHOMETEAM] = event.idHomeTeam
-                    hashMap[FavoriteMatch.IDAWAYTEAM] = event.idAwayTeam
-                    hashMap[FavoriteMatch.STRRESULT] = event.strResult
-                    hashMap[FavoriteMatch.STRCIRCUIT] = event.strCircuit
-                    hashMap[FavoriteMatch.STRCOUNTRY] = event.strCountry
-                    hashMap[FavoriteMatch.STRCITY] = event.strCity
-                    hashMap[FavoriteMatch.STRPOSTER] = event.strPoster
-                    hashMap[FavoriteMatch.STRFANART] = event.strFanart
-                    hashMap[FavoriteMatch.STRTHUMB] = event.strThumb
-                    hashMap[FavoriteMatch.STRBANNER] = event.strBanner
-                    hashMap[FavoriteMatch.STRMAP] = event.strMap
-                    hashMap[FavoriteMatch.STRLOCKED] = event.strLocked
+                    hashMap[Event.IDEVENT] = event.idEvent
+                    hashMap[Event.IDSOCCERXML] = event.idSoccerXML
+                    hashMap[Event.STREVENT] = event.strEvent
+                    hashMap[Event.STRFILENAME] = event.strFilename
+                    hashMap[Event.STRSPORT] = event.strSport
+                    hashMap[Event.IDLEAGUE] = event.idLeague
+                    hashMap[Event.STRLEAGUE] = event.strLeague
+                    hashMap[Event.STRSEASON] = event.strSeason
+                    hashMap[Event.STRDESCRIPTIONEN] = event.strDescriptionEN
+                    hashMap[Event.STRHOMETEAM] = event.strHomeTeam
+                    hashMap[Event.STRAWAYTEAM] = event.strAwayTeam
+                    hashMap[Event.INTHOMESCORE] = event.intHomeScore
+                    hashMap[Event.INTROUND] = event.intRound
+                    hashMap[Event.INTAWAYSCORE] = event.intAwayScore
+                    hashMap[Event.INTSPECTATORS] = event.intSpectators
+                    hashMap[Event.STRHOMEGOALDETAILS] = event.strHomeGoalDetails
+                    hashMap[Event.STRHOMEREDCARDS] = event.strHomeRedCards
+                    hashMap[Event.STRHOMEYELLOWCARDS] = event.strHomeYellowCards
+                    hashMap[Event.STRHOMELINEUPGOALKEEPER] = event.strHomeLineupGoalkeeper
+                    hashMap[Event.STRHOMELINEUPDEFENSE] = event.strHomeLineupDefense
+                    hashMap[Event.STRHOMELINEUPMIDFIELD] = event.strHomeLineupMidfield
+                    hashMap[Event.STRHOMELINEUPFORWARD] = event.strHomeLineupForward
+                    hashMap[Event.STRHOMELINEUPSUBSTITUTES] = event.strHomeLineupSubstitutes
+                    hashMap[Event.STRHOMEFORMATION] = event.strHomeFormation
+                    hashMap[Event.STRAWAYREDCARDS] = event.strAwayRedCards
+                    hashMap[Event.STRAWAYYELLOWCARDS] = event.strAwayYellowCards
+                    hashMap[Event.STRAWAYGOALDETAILS] = event.strAwayGoalDetails
+                    hashMap[Event.STRAWAYLINEUPGOALKEEPER] = event.strAwayLineupGoalkeeper
+                    hashMap[Event.STRAWAYLINEUPDEFENSE] = event.strAwayLineupDefense
+                    hashMap[Event.STRAWAYLINEUPMIDFIELD] = event.strAwayLineupMidfield
+                    hashMap[Event.STRAWAYLINEUPFORWARD] = event.strAwayLineupForward
+                    hashMap[Event.STRAWAYLINEUPSUBSTITUTES] = event.strAwayLineupSubstitutes
+                    hashMap[Event.STRAWAYFORMATION] = event.strAwayFormation
+                    hashMap[Event.INTHOMESHOTS] = event.intHomeShots
+                    hashMap[Event.INTAWAYSHOTS] = event.intAwayShots
+                    hashMap[Event.DATEEVENT] = event.dateEvent
+                    hashMap[Event.STRDATE] = event.strDate
+                    hashMap[Event.STRTIME] = event.strTime
+                    hashMap[Event.STRTVSTATION] = event.strTVStation
+                    hashMap[Event.IDHOMETEAM] = event.idHomeTeam
+                    hashMap[Event.IDAWAYTEAM] = event.idAwayTeam
+                    hashMap[Event.STRRESULT] = event.strResult
+                    hashMap[Event.STRCIRCUIT] = event.strCircuit
+                    hashMap[Event.STRCOUNTRY] = event.strCountry
+                    hashMap[Event.STRCITY] = event.strCity
+                    hashMap[Event.STRPOSTER] = event.strPoster
+                    hashMap[Event.STRFANART] = event.strFanart
+                    hashMap[Event.STRTHUMB] = event.strThumb
+                    hashMap[Event.STRBANNER] = event.strBanner
+                    hashMap[Event.STRMAP] = event.strMap
+                    hashMap[Event.STRLOCKED] = event.strLocked
 
-                    DataFavorite.insert(this, lc_detail, hashMap)
+                    DataEvent.insert(this, lc_detail, hashMap)
                 }
 
                 isFavorite = !isFavorite
@@ -159,8 +158,8 @@ class DetailMatchActivity: BaseActivity(), DetailMatchV{
             menuItem?.getItem(0)?.icon = ContextCompat.getDrawable(this, R.drawable.ic_star_border_black_24dp)
     }
 
-    private fun favoriteState(){
-        val favorite = DataFavorite.getDataById(this, event.idEvent.toString())
+    private fun favoriteState() {
+        val favorite = DataEvent.getDataById(this, event.idEvent.toString())
         if (!favorite.isEmpty()) isFavorite = true
     }
 

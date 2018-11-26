@@ -1,6 +1,6 @@
 package com.dev.fi.footballapps.ui.detailTeam
 
-import com.dev.fi.footballapps.data.models.PlayerResponse
+import com.dev.fi.footballapps.data.PlayerResponse
 import com.dev.fi.footballapps.rest.Api
 import com.dev.fi.footballapps.rest.Repository
 import com.dev.fi.footballapps.utils.CoroutineContextProvider

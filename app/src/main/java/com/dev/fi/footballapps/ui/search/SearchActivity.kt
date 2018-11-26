@@ -2,19 +2,16 @@ package com.dev.fi.footballapps.ui.search
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.util.Log
 import android.view.Menu
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.base.BaseActivity
-import com.dev.fi.footballapps.data.models.Event
-import com.dev.fi.footballapps.data.models.Team
+import com.dev.fi.footballapps.data.Event
+import com.dev.fi.footballapps.data.Team
 import com.dev.fi.footballapps.rest.Repository
 import com.dev.fi.footballapps.ui.detailMatch.DetailMatchActivity
 import com.dev.fi.footballapps.ui.match.MatchAdapter
-import com.dev.fi.footballapps.ui.match.MatchP
-import com.dev.fi.footballapps.ui.match.MatchV
 import com.dev.fi.footballapps.ui.teams.TeamsAdapter
 import com.dev.fi.footballapps.utils.invisible
 import com.dev.fi.footballapps.utils.visible

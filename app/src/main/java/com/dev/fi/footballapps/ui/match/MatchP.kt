@@ -1,7 +1,6 @@
 package com.dev.fi.footballapps.ui.match
 
-import com.dev.fi.footballapps.data.models.EventResponse
-import com.dev.fi.footballapps.data.models.EventsResponse
+import com.dev.fi.footballapps.data.EventsResponse
 import com.dev.fi.footballapps.rest.Api
 import com.dev.fi.footballapps.rest.Repository
 import com.dev.fi.footballapps.utils.CoroutineContextProvider

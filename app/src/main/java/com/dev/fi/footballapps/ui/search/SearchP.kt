@@ -1,7 +1,7 @@
 package com.dev.fi.footballapps.ui.search
 
-import com.dev.fi.footballapps.data.models.EventResponse
-import com.dev.fi.footballapps.data.models.TeamResponse
+import com.dev.fi.footballapps.data.EventResponse
+import com.dev.fi.footballapps.data.TeamResponse
 import com.dev.fi.footballapps.rest.Api
 import com.dev.fi.footballapps.rest.Repository
 import com.dev.fi.footballapps.utils.CoroutineContextProvider

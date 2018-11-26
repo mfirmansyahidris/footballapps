@@ -1,6 +1,6 @@
 package com.dev.fi.footballapps.ui.teams
 
-import com.dev.fi.footballapps.data.models.Team
+import com.dev.fi.footballapps.data.Team
 
 /**
  ****************************************

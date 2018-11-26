@@ -2,8 +2,7 @@ package com.dev.fi.footballapps.ui.detailTeam
 
 import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.base.BaseFragment
-import com.dev.fi.footballapps.data.models.Team
-import com.orhanobut.logger.Logger
+import com.dev.fi.footballapps.data.Team
 import kotlinx.android.synthetic.main.fragment_detail_team_overview.*
 
 /**

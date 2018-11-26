@@ -7,7 +7,7 @@ import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.ui.match.MatchFragment.Companion.nextMatchCountingIdlingResource
 import com.dev.fi.footballapps.utils.SpinnerListener2
 import com.dev.fi.footballapps.base.BaseFragment
-import com.dev.fi.footballapps.data.models.Event
+import com.dev.fi.footballapps.data.Event
 import com.dev.fi.footballapps.rest.Repository
 import com.dev.fi.footballapps.ui.detailMatch.DetailMatchActivity
 import com.dev.fi.footballapps.utils.invisible
