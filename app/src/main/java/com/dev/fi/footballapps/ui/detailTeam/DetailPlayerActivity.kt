@@ -16,7 +16,7 @@ created by -manca-
  ****************************************
  */
 
-class DetailPlayerActivity: BaseActivity(){
+class DetailPlayerActivity : BaseActivity() {
     override fun getLayoutResource(): Int = R.layout.activity_detail_player
 
     override fun getToolbarResource(): Int = R.id.main_toolbar
@@ -32,7 +32,10 @@ class DetailPlayerActivity: BaseActivity(){
         val bannerUrl = player.strFanart1
 
         if (bannerUrl != null) Picasso.get().load(bannerUrl).into(iv_banner, object : Callback {
-            override fun onSuccess() { pb_placeholder.invisible()}
+            override fun onSuccess() {
+                pb_placeholder.invisible()
+            }
+
             override fun onError(e: Exception?) {}
         })
 
@@ -54,10 +57,9 @@ class DetailPlayerActivity: BaseActivity(){
     }
 
     fun getSimpleValue(text: String?): String {
-        return if((text == null) || (text.toUpperCase() == "NULL") || (text == "")){
+        return if ((text == null) || (text.toUpperCase() == "NULL") || (text == "")) {
             "0.0"
-        }
-        else{
+        } else {
             val re = Regex("[^1-9.]")
             re.replace(text.toString(), "")
         }

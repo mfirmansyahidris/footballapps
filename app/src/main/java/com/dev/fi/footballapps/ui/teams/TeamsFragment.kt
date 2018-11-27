@@ -13,6 +13,7 @@ import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.base.BaseFragment
 import com.dev.fi.footballapps.data.Team
 import com.dev.fi.footballapps.rest.Repository
+import com.dev.fi.footballapps.ui.HomeActivity.Companion.teamCountingIdlingResource
 import com.dev.fi.footballapps.ui.detailTeam.DetailTeamActivity
 import com.dev.fi.footballapps.ui.search.SearchActivity
 import com.dev.fi.footballapps.utils.invisible
@@ -28,14 +29,13 @@ created by -manca-
  ****************************************
  */
 
-class TeamsFragment: BaseFragment(), TeamsV{
+class TeamsFragment : BaseFragment(), TeamsV {
     private var isActive = true
     private var items: MutableList<Team> = mutableListOf()
     private lateinit var presenter: TeamsP
     override fun getLayoutResource(): Int = R.layout.fragment_teams
 
     override fun mainCode() {
-        rv_teams.id = R.id.rv_match_prev
         rv_teams.addItemDecoration(DividerItemDecoration(activity, DividerItemDecoration.VERTICAL))
         rv_teams.layoutManager = LinearLayoutManager(activity)
 
@@ -52,6 +52,7 @@ class TeamsFragment: BaseFragment(), TeamsV{
             override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
                 presenter.getTeams(leaguesId[position])
             }
+
             override fun onNothingSelected(parent: AdapterView<*>) {}
         }
 
@@ -77,14 +78,16 @@ class TeamsFragment: BaseFragment(), TeamsV{
     }
 
     override fun onProcess() {
-        if(isActive){
+        teamCountingIdlingResource.increment()
+        if (isActive) {
             rv_teams.invisible()
             pb_process.visible()
         }
     }
 
     override fun onDone() {
-        if (isActive){
+        teamCountingIdlingResource.decrement()
+        if (isActive) {
             rv_teams.visible()
             pb_process.invisible()
         }
@@ -96,7 +99,7 @@ class TeamsFragment: BaseFragment(), TeamsV{
     }
 
     override fun showResult(data: List<Team>) {
-        if(isActive){
+        if (isActive) {
             items.clear()
             items.addAll(data)
             rv_teams.adapter = TeamsAdapter(activity, items) {

@@ -4,12 +4,12 @@ import android.content.Intent
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dev.fi.footballapps.R
-import com.dev.fi.footballapps.ui.match.MatchFragment.Companion.nextMatchCountingIdlingResource
-import com.dev.fi.footballapps.utils.SpinnerListener2
 import com.dev.fi.footballapps.base.BaseFragment
 import com.dev.fi.footballapps.data.Event
 import com.dev.fi.footballapps.rest.Repository
+import com.dev.fi.footballapps.ui.HomeActivity.Companion.nextMatchCountingIdlingResource
 import com.dev.fi.footballapps.ui.detailMatch.DetailMatchActivity
+import com.dev.fi.footballapps.utils.SpinnerListener2
 import com.dev.fi.footballapps.utils.invisible
 import com.dev.fi.footballapps.utils.visible
 import com.google.gson.Gson
@@ -45,7 +45,7 @@ class MatchNextFragment : BaseFragment(), MatchV, SpinnerListener2 {
 
     override fun onProcess() {
         nextMatchCountingIdlingResource.increment()
-        if(isActive){
+        if (isActive) {
             rv_match.invisible()
             pb_process.visible()
         }
@@ -53,7 +53,7 @@ class MatchNextFragment : BaseFragment(), MatchV, SpinnerListener2 {
 
     override fun onDone() {
         nextMatchCountingIdlingResource.decrement()
-        if(isActive){
+        if (isActive) {
             rv_match.visible()
             pb_process.invisible()
         }
@@ -67,7 +67,7 @@ class MatchNextFragment : BaseFragment(), MatchV, SpinnerListener2 {
     override fun showResult(data: List<Event>) {
         items.clear()
         items.addAll(data)
-        if(isActive){
+        if (isActive) {
             rv_match.adapter = MatchAdapter(activity, items) {
                 val intent = Intent(activity, DetailMatchActivity::class.java)
                 intent.putExtra("event", it)

@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.test.espresso.idling.CountingIdlingResource
 import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.base.BaseActivity
 import com.dev.fi.footballapps.data.Team
@@ -40,7 +41,10 @@ class DetailTeamActivity : BaseActivity() {
         bundle.putParcelable("teams", team)
 
         if (team.strTeamBadge != null) Picasso.get().load(team.strTeamBadge).into(iv_logo, object : Callback {
-            override fun onSuccess() { pb_placeholder.invisible()}
+            override fun onSuccess() {
+                pb_placeholder.invisible()
+            }
+
             override fun onError(e: Exception?) {}
         })
 
@@ -167,6 +171,9 @@ class DetailTeamActivity : BaseActivity() {
         if (!favorite.isEmpty()) isFavorite = true
     }
 
+    companion object {
+        var playerCountingIdlingResource = CountingIdlingResource("detailTeam")
+    }
 
 
 }

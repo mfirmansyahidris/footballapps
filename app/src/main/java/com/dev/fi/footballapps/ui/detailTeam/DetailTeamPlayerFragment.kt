@@ -8,6 +8,7 @@ import com.dev.fi.footballapps.base.BaseFragment
 import com.dev.fi.footballapps.data.Player
 import com.dev.fi.footballapps.data.Team
 import com.dev.fi.footballapps.rest.Repository
+import com.dev.fi.footballapps.ui.detailTeam.DetailTeamActivity.Companion.playerCountingIdlingResource
 import com.dev.fi.footballapps.utils.invisible
 import com.dev.fi.footballapps.utils.visible
 import com.google.gson.Gson
@@ -40,14 +41,16 @@ class DetailTeamPlayerFragment : BaseFragment(), DetailTeamV {
     }
 
     override fun onProcess() {
-        if(isActive){
+        playerCountingIdlingResource.increment()
+        if (isActive) {
             rv_players.invisible()
             pb_process.visible()
         }
     }
 
     override fun onDone() {
-        if(isActive){
+        playerCountingIdlingResource.decrement()
+        if (isActive) {
             rv_players.visible()
             pb_process.invisible()
         }
@@ -61,7 +64,7 @@ class DetailTeamPlayerFragment : BaseFragment(), DetailTeamV {
     override fun showResult(data: List<Player>) {
         items.clear()
         items.addAll(data)
-        if(isActive){
+        if (isActive) {
             rv_players.adapter = DetailTeamPlayerAdapter(activity, items) {
                 val intent = Intent(activity, DetailPlayerActivity::class.java)
                 intent.putExtra("player", it)

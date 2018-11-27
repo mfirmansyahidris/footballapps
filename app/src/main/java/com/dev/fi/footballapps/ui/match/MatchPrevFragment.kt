@@ -4,12 +4,12 @@ import android.content.Intent
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dev.fi.footballapps.R
-import com.dev.fi.footballapps.ui.match.MatchFragment.Companion.prevMatchCountingIdlingResource
-import com.dev.fi.footballapps.utils.SpinnerListener1
 import com.dev.fi.footballapps.base.BaseFragment
 import com.dev.fi.footballapps.data.Event
 import com.dev.fi.footballapps.rest.Repository
+import com.dev.fi.footballapps.ui.HomeActivity.Companion.prevMatchCountingIdlingResource
 import com.dev.fi.footballapps.ui.detailMatch.DetailMatchActivity
+import com.dev.fi.footballapps.utils.SpinnerListener1
 import com.dev.fi.footballapps.utils.invisible
 import com.dev.fi.footballapps.utils.visible
 import com.google.gson.Gson

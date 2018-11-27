@@ -5,6 +5,7 @@ import android.content.Intent
 import android.view.Menu
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.test.espresso.idling.CountingIdlingResource
 import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.base.BaseActivity
 import com.dev.fi.footballapps.data.Event
@@ -71,12 +72,14 @@ class SearchActivity : BaseActivity(), SearchV {
 
 
     override fun onProcess() {
+        searchCountingIdlingResource.increment()
         pb_process.visible()
         rv_searchResult.invisible()
         tv_listMessage.invisible()
     }
 
     override fun onDone() {
+        searchCountingIdlingResource.decrement()
         pb_process.invisible()
         rv_searchResult.visible()
         tv_listMessage.invisible()
@@ -113,9 +116,13 @@ class SearchActivity : BaseActivity(), SearchV {
         items.clear()
         items.addAll(data)
         rv_searchResult.adapter = TeamsAdapter(this, items) {
-//            val intent = Intent(this, DetailMatchActivity::class.java)
-//            intent.putExtra("team", it)
-//            startActivity(intent)
+            val intent = Intent(this, DetailMatchActivity::class.java)
+            intent.putExtra("team", it)
+            startActivity(intent)
         }
+    }
+
+    companion object {
+        var searchCountingIdlingResource = CountingIdlingResource("search")
     }
 }

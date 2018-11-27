@@ -3,6 +3,7 @@ package com.dev.fi.footballapps.ui.detailMatch
 import android.view.Menu
 import android.view.MenuItem
 import androidx.core.content.ContextCompat
+import androidx.test.espresso.idling.CountingIdlingResource
 import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.base.BaseActivity
 import com.dev.fi.footballapps.data.Event
@@ -161,6 +162,10 @@ class DetailMatchActivity : BaseActivity(), DetailMatchV {
     private fun favoriteState() {
         val favorite = DataEvent.getDataById(this, event.idEvent.toString())
         if (!favorite.isEmpty()) isFavorite = true
+    }
+
+    companion object {
+        var detailMatchCountingIdlingResouce = CountingIdlingResource("detail_match")
     }
 
 }

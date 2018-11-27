@@ -6,12 +6,11 @@ import android.view.*
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.TextView
-import androidx.test.espresso.idling.CountingIdlingResource
 import com.dev.fi.footballapps.R
-import com.dev.fi.footballapps.utils.SpinnerListener1
-import com.dev.fi.footballapps.utils.SpinnerListener2
 import com.dev.fi.footballapps.base.BaseFragment
 import com.dev.fi.footballapps.ui.search.SearchActivity
+import com.dev.fi.footballapps.utils.SpinnerListener1
+import com.dev.fi.footballapps.utils.SpinnerListener2
 import com.dev.fi.footballapps.utils.ViewPagerAdapter
 import kotlinx.android.synthetic.main.fragment_match.*
 import kotlinx.android.synthetic.main.toolbar.*
@@ -89,9 +88,6 @@ class MatchFragment : BaseFragment() {
         fun setSpinnerListener2(listener: SpinnerListener2) {
             spinnerListener2 = listener
         }
-
-        var prevMatchCountingIdlingResource = CountingIdlingResource("PREVMATCH")
-        var nextMatchCountingIdlingResource = CountingIdlingResource("NEXTMATCH")
     }
 
 }

@@ -42,7 +42,10 @@ class DetailTeamPlayerAdapter(private val context: Context, private val items: L
             val logoUrl = items.strThumb
 
             if (logoUrl != null) Picasso.get().load(logoUrl).into(ivThumb, object : Callback {
-                override fun onSuccess() { placeHolder.invisible()}
+                override fun onSuccess() {
+                    placeHolder.invisible()
+                }
+
                 override fun onError(e: Exception?) {}
             })
 

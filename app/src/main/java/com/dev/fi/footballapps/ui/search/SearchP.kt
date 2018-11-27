@@ -30,7 +30,7 @@ class SearchP(private val view: SearchV,
             if (data.event != null) {
                 view.showResult(data.event)
                 view.onDone()
-            }else{
+            } else {
                 view.onEmpyResult()
             }
         }
@@ -43,10 +43,10 @@ class SearchP(private val view: SearchV,
                     .doRequest(Api.getSearchTeam(key)).await(),
                     TeamResponse::class.java)
 
-            if (data.teams!= null) {
+            if (data.teams != null) {
                 view.showResult(data.teams)
                 view.onDone()
-            }else{
+            } else {
                 view.onEmpyResult()
             }
         }

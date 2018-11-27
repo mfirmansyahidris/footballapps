@@ -1,10 +1,11 @@
 package com.dev.fi.footballapps.ui
 
 import androidx.fragment.app.Fragment
+import androidx.test.espresso.idling.CountingIdlingResource
 import com.dev.fi.footballapps.R
+import com.dev.fi.footballapps.base.BaseActivity
 import com.dev.fi.footballapps.ui.favorite.FavoriteFragment
 import com.dev.fi.footballapps.ui.match.MatchFragment
-import com.dev.fi.footballapps.base.BaseActivity
 import com.dev.fi.footballapps.ui.teams.TeamsFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -32,5 +33,11 @@ class HomeActivity : BaseActivity() {
         val ft = supportFragmentManager.beginTransaction()
         ft.replace(R.id.fl_container, fragment)
         ft.commit()
+    }
+
+    companion object {
+        var prevMatchCountingIdlingResource = CountingIdlingResource("match_prev")
+        var nextMatchCountingIdlingResource = CountingIdlingResource("match_next")
+        var teamCountingIdlingResource = CountingIdlingResource("team")
     }
 }

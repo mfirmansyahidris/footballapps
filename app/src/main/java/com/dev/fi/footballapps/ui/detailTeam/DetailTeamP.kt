@@ -25,7 +25,7 @@ class DetailTeamP(private val view: DetailTeamV,
             val data = gson.fromJson(repository
                     .doRequest(Api.getPlayers(team)).await(),
                     PlayerResponse::class.java)
-            if (data.player!= null) {
+            if (data.player != null) {
                 view.showResult(data.player)
                 view.onDone()
             }

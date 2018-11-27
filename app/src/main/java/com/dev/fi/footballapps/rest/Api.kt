@@ -19,11 +19,11 @@ object Api {
         return BuildConfig.BASE_URL + "api/v1/json/${BuildConfig.TSDB_API_KEY}" + "/eventsnextleague.php?id=" + id
     }
 
-    fun getSearchMatch(key: String): String{
+    fun getSearchMatch(key: String): String {
         return BuildConfig.BASE_URL + "api/v1/json/${BuildConfig.TSDB_API_KEY}" + "/searchevents.php?e=" + key
     }
 
-    fun getSearchTeam(key: String): String{
+    fun getSearchTeam(key: String): String {
         return BuildConfig.BASE_URL + "api/v1/json/${BuildConfig.TSDB_API_KEY}" + "/searchteams.php?t=" + key
     }
 

@@ -15,7 +15,7 @@ created by -manca-
  ****************************************
  */
 
-class FavoriteFragment: BaseFragment(){
+class FavoriteFragment : BaseFragment() {
     override fun getLayoutResource(): Int = R.layout.fragment_favorite
 
     override fun mainCode() {
