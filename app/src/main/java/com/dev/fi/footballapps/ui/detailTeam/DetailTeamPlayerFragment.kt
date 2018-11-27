@@ -21,6 +21,7 @@ created by -manca-
  */
 
 class DetailTeamPlayerFragment : BaseFragment(), DetailTeamV {
+    private var isActive = true
     private var items: MutableList<Player> = mutableListOf()
     private lateinit var presenter: DetailTeamP
 
@@ -39,22 +40,33 @@ class DetailTeamPlayerFragment : BaseFragment(), DetailTeamV {
     }
 
     override fun onProcess() {
-        rv_players.invisible()
-        pb_process.visible()
+        if(isActive){
+            rv_players.invisible()
+            pb_process.visible()
+        }
     }
 
     override fun onDone() {
-        rv_players.visible()
-        pb_process.invisible()
+        if(isActive){
+            rv_players.visible()
+            pb_process.invisible()
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        isActive = true
     }
 
     override fun showResult(data: List<Player>) {
         items.clear()
         items.addAll(data)
-        rv_players.adapter = DetailTeamPlayerAdapter(activity, items) {
-            val intent = Intent(activity, DetailPlayerActivity::class.java)
-            intent.putExtra("player", it)
-            startActivity(intent)
+        if(isActive){
+            rv_players.adapter = DetailTeamPlayerAdapter(activity, items) {
+                val intent = Intent(activity, DetailPlayerActivity::class.java)
+                intent.putExtra("player", it)
+                startActivity(intent)
+            }
         }
     }
 }

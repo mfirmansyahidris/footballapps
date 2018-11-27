@@ -23,6 +23,7 @@ created by -manca-
  */
 
 class MatchNextFragment : BaseFragment(), MatchV, SpinnerListener2 {
+    private var isActive = true
     private var items: MutableList<Event> = mutableListOf()
     private lateinit var presenter: MatchP
     override fun getLayoutResource(): Int = R.layout.fragment_match_child
@@ -44,24 +45,34 @@ class MatchNextFragment : BaseFragment(), MatchV, SpinnerListener2 {
 
     override fun onProcess() {
         nextMatchCountingIdlingResource.increment()
-        rv_match.invisible()
-        pb_process.visible()
+        if(isActive){
+            rv_match.invisible()
+            pb_process.visible()
+        }
     }
 
     override fun onDone() {
         nextMatchCountingIdlingResource.decrement()
-        rv_match.visible()
-        pb_process.invisible()
+        if(isActive){
+            rv_match.visible()
+            pb_process.invisible()
+        }
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        isActive = false
+    }
 
     override fun showResult(data: List<Event>) {
         items.clear()
         items.addAll(data)
-        rv_match.adapter = MatchAdapter(activity, items) {
-            val intent = Intent(activity, DetailMatchActivity::class.java)
-            intent.putExtra("event", it)
-            startActivity(intent)
+        if(isActive){
+            rv_match.adapter = MatchAdapter(activity, items) {
+                val intent = Intent(activity, DetailMatchActivity::class.java)
+                intent.putExtra("event", it)
+                startActivity(intent)
+            }
         }
     }
 

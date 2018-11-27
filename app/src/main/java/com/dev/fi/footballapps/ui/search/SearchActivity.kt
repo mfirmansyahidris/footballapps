@@ -52,7 +52,7 @@ class SearchActivity : BaseActivity(), SearchV {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                if (newText?.length!! > 3) {
+                if (newText?.length!! > 2) {
                     if(searchType == "match"){
                         presenter.getSearchMatch(newText)
                     }else if(searchType == "teams"){

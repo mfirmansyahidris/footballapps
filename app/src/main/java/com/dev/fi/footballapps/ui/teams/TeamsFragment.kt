@@ -29,6 +29,7 @@ created by -manca-
  */
 
 class TeamsFragment: BaseFragment(), TeamsV{
+    private var isActive = true
     private var items: MutableList<Team> = mutableListOf()
     private lateinit var presenter: TeamsP
     override fun getLayoutResource(): Int = R.layout.fragment_teams
@@ -76,22 +77,33 @@ class TeamsFragment: BaseFragment(), TeamsV{
     }
 
     override fun onProcess() {
-        rv_teams.invisible()
-        pb_process.visible()
+        if(isActive){
+            rv_teams.invisible()
+            pb_process.visible()
+        }
     }
 
     override fun onDone() {
-        rv_teams.visible()
-        pb_process.invisible()
+        if (isActive){
+            rv_teams.visible()
+            pb_process.invisible()
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        isActive = false
     }
 
     override fun showResult(data: List<Team>) {
-        items.clear()
-        items.addAll(data)
-        rv_teams.adapter = TeamsAdapter(activity, items) {
-            val intent = Intent(activity, DetailTeamActivity::class.java)
-            intent.putExtra("teams", it)
-            startActivity(intent)
+        if(isActive){
+            items.clear()
+            items.addAll(data)
+            rv_teams.adapter = TeamsAdapter(activity, items) {
+                val intent = Intent(activity, DetailTeamActivity::class.java)
+                intent.putExtra("teams", it)
+                startActivity(intent)
+            }
         }
     }
 

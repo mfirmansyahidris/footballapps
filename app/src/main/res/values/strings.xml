@@ -36,6 +36,8 @@
     <!--lable-->
     <string name="lable_vs">VS</string>
     <string name="msg_emptyResult">No Result Found</string>
+    <string name="msg_emptyMatch">Favorite Match is empty</string>
+    <string name="msg_emptyTeam">Favorite Team is empty</string>
     <string name="lable_goals">Goals</string>
     <string name="lable_shots">Shots</string>
     <string name="lable_lineups">Lineups</string>

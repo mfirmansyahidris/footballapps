@@ -6,6 +6,7 @@ import com.dev.fi.footballapps.R
 import com.dev.fi.footballapps.base.BaseFragment
 import com.dev.fi.footballapps.utils.ViewPagerAdapter
 import kotlinx.android.synthetic.main.fragment_match.*
+import kotlinx.android.synthetic.main.toolbar.*
 
 /**
  ****************************************
@@ -27,6 +28,7 @@ class FavoriteFragment: BaseFragment(){
         tl_main.setupWithViewPager(vp_main)
         setupTab(getString(R.string.tab_match), 0) //custom layout
         setupTab(getString(R.string.tab_team), 1) //custom layout
+        activity.setSupportActionBar(main_toolbar)
     }
 
     private fun setupTab(title: String, position: Int) {
