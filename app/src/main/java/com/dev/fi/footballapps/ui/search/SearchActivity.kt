@@ -12,6 +12,7 @@ import com.dev.fi.footballapps.data.Event
 import com.dev.fi.footballapps.data.Team
 import com.dev.fi.footballapps.rest.Repository
 import com.dev.fi.footballapps.ui.detailMatch.DetailMatchActivity
+import com.dev.fi.footballapps.ui.detailTeam.DetailTeamActivity
 import com.dev.fi.footballapps.ui.match.MatchAdapter
 import com.dev.fi.footballapps.ui.teams.TeamsAdapter
 import com.dev.fi.footballapps.utils.invisible
@@ -116,8 +117,8 @@ class SearchActivity : BaseActivity(), SearchV {
         items.clear()
         items.addAll(data)
         rv_searchResult.adapter = TeamsAdapter(this, items) {
-            val intent = Intent(this, DetailMatchActivity::class.java)
-            intent.putExtra("team", it)
+            val intent = Intent(this, DetailTeamActivity::class.java)
+            intent.putExtra("teams", it)
             startActivity(intent)
         }
     }
